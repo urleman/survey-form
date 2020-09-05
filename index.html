@@ -1,6 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <style>
+        body {
+            font-family: impact;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+     label {
+         font-size: 18px;
+         display: block;
+         padding-bottom: 10px;
+     }
+     form {
+         background-color:  hsla(0, 100%, 70%, 0.3);
+         padding: 40px 40px 40px 40px;
+         }
+     .radio-inline {
+         display: inline-block;
+     }
+     #button-area {
+         float: left;
+         width: 25%;
+         height: 25%;
+     }
+     input.checkbox {
+         display: inline-block;
+         }
+    </style>
 </head>
 
 
@@ -10,34 +37,41 @@
 <form id="survey-form">
  <label id="name-label">Name:</label>
   <input type="text" name="name" id="name" placeholder="your name"  required></input><br>
-</br>
+<br>
 <label id="email-label">Email:</label>
 <input type="email" name="email" id="email" placeholder="your adress"  required></input><br>
-    </br>
+    <br>
   <label id="number-label">Number:</label>
     <input type="number" name="number" id="number" min="0" max="10" placeholder="your number" required></input><br>
-    </br>
+  <br>
+  <label id="meme-flavor">meme flavor:</label>
     <select id="dropdown" name="memes">
         <option value="dank">dank</option>
         <option value="cringe">cringe</option>
         <option value="wholesome">wholesome</option>
         <option value="spicy">spicy</option>
     </select>
-    <br></br>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label><br>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other">Other</label> 
-        <br></br>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> I have a bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> I have a car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> I have a boat</label><br>
-    <textarea type="textarea" placeholder="additional comments"></textarea>
+    <br>
+    <br>
+    <label id="identity">Identity:</label>
+    <div id="button-area">
+    <input type="radio" class="radio-inline" id="male" name="gender" value="male">
+    <label for="male">anon</label><br>
+    <input type="radio" class="radio-inline" id="female" name="gender" value="female">
+    <label for="female">redditor</label><br>
+    <input type="radio" class="radio-inline" id="other" name="gender" value="other">
+    <label for="other">normie</label>
+    </div>
+    <br>
+    <label id="transportation">memes are:</label>
+    <input type="checkbox" id="choice1" name="choice1" value="good">
+    <label for="choice1">good</label><br>
+    <input type="checkbox" id="choice2" name="choice2" value="bad">
+    <label for="choice2">bad</label><br>
+    <br>
+    <textarea type="textarea" placeholder="additional comments (optional)"></textarea>
+    <br>
+    <br>
     <input type="submit" name="submit" id="submit"></input>
 </form>
 <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
